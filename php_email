@@ -1,0 +1,11 @@
+    function send_email() {
+        $to_email=<to_email>
+        $msg=<message>
+        $subject=<subject>
+        $headers = "MIME-Version: 1.0\r\n";
+        $headers .= "Content-type: text/html; charset=iso-8859-1\r\n";
+        $headers .="From: name ... <from_email>";
+        $msg .="<br><br>The information in this email (and any attachments hereto) are confidential and may be protected by legal professional privilege If you are not the intended recipient, you must not use or disseminate the information. Receipt by anyone other than the intended recipient is not a waiver of any legal professional privilege. If you have received this email in error, please immediately notify me by (Reply) command and permanently delete the original and any copies or printouts thereof. Although this email and any attachments are believed to be free of any virus or other defect that might affect any computer system into which it is received and opened, it is the responsibility of the recipient to ensure that it is virus free and no responsibility is accepted by Aimsfun. or its subsidiaries or affiliates either jointly or severally, for any loss or damage arising in any way from its use.<br><br>";
+        mail($to_email,$subject,$msg,$headers);
+
+    }
